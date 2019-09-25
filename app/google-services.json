@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1025579310817",
+    "firebase_url": "https://simptex-18e48.firebaseio.com",
+    "project_id": "simptex-18e48",
+    "storage_bucket": "simptex-18e48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025579310817:android:d29d7056a0431c973c21a0",
+        "android_client_info": {
+          "package_name": "com.belivnat.simptex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025579310817-gu6ucrv3aaj7q9sjdbidv8qqqohvou18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0qbhhVmHQV02zgXXfpJPMIxqz2EIkxl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025579310817-gu6ucrv3aaj7q9sjdbidv8qqqohvou18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
