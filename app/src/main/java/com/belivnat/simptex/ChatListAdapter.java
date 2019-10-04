@@ -31,13 +31,15 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull ChatListAdapter.MyViewHolder holder, int position) {
-        holder.tvChatUser.setText(chatUsers.get(position).userName);
-        holder.tvRecentChat.setText(chatUsers.get(position).recentChat);
-        String userImageUrl = chatUsers.get(position).getUserImageUrl();
-        if (userImageUrl != null && !userImageUrl.equals("")) {
-            Glide.with(context).load(chatUsers.get(position).getUserImageUrl()).placeholder(R.drawable.ic_user_placeholder).into(holder.imgChatUser);
-        } else {
-            holder.imgChatUser.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_user_placeholder));
+        if (chatUsers.get(position) != null) {
+            holder.tvChatUser.setText(chatUsers.get(position).userName);
+            holder.tvRecentChat.setText(chatUsers.get(position).recentChat);
+            String userImageUrl = chatUsers.get(position).getUserImageUrl();
+            if (userImageUrl != null && !userImageUrl.equals("")) {
+                Glide.with(context).load(chatUsers.get(position).getUserImageUrl()).placeholder(R.drawable.ic_user_placeholder).into(holder.imgChatUser);
+            } else {
+                holder.imgChatUser.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_user_placeholder));
+            }
         }
     }
 
