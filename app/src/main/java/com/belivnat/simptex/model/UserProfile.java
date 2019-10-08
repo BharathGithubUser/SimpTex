@@ -1,4 +1,4 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.model;
 
 public class UserProfile {
     public String name;

@@ -1,4 +1,4 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.model;
 
 public class Chats {
     public String message;
@@ -13,7 +13,7 @@ public class Chats {
     }
 
     public String msg_type;
-    Chats() {}
+    public Chats() {}
 
     public String getMessage() {
         return message;

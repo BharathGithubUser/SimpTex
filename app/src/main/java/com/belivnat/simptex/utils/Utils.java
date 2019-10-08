@@ -1,16 +1,12 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.widget.Toast;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
-class Utils {
-     static boolean isConnectedToInternet(Context context) {
+public class Utils {
+     public static boolean isConnectedToInternet(Context context) {
          ConnectivityManager cm =
                  (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -18,7 +14,7 @@ class Utils {
          return activeNetwork != null &&
                  activeNetwork.isConnectedOrConnecting();
      }
-     static void makeToast(Context context, String message) {
+     public static void makeToast(Context context, String message) {
          Toast.makeText(context, "message", Toast.LENGTH_SHORT).show();
      }
 }

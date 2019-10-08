@@ -1,4 +1,4 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.utils;
 
 import android.content.Context;
 import android.view.GestureDetector;

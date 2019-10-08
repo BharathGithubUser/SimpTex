@@ -1,4 +1,4 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -40,13 +40,13 @@ public class Users implements Parcelable {
         this.userName = userName;
     }
 
-    Users(long mobileNumber, String userName, String recentChat, String userImageUrl) {
+    public Users(long mobileNumber, String userName, String recentChat, String userImageUrl) {
         this.mobileNumber = mobileNumber;
         this.userName = userName;
         this.recentChat = recentChat;
         this.userImageUrl = userImageUrl;
     }
-    Users() { }
+    public Users() { }
 
     @Override
     public int describeContents() {

@@ -1,4 +1,4 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.modules.splash;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
+import com.belivnat.simptex.application.MyApplication;
+import com.belivnat.simptex.R;
+import com.belivnat.simptex.model.UserProfile;
+import com.belivnat.simptex.model.Users;
+import com.belivnat.simptex.model.Chats;
+import com.belivnat.simptex.modules.userslist.ChatListActivity;
+import com.belivnat.simptex.utils.Constants;
+import com.belivnat.simptex.utils.Utils;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -20,7 +26,7 @@ public class SplashActivity extends AppCompatActivity implements ValueEventListe
     Handler mhandler;
     Runnable runnable;
     Users users;
-    UserChats userChats;
+    Chats userChats;
     UserProfile userProfile;
     ArrayList<Users> usersList;
     private static final String TAG = "SplashActivity";
@@ -30,7 +36,7 @@ public class SplashActivity extends AppCompatActivity implements ValueEventListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         users = new Users();
-        userChats = new UserChats();
+        userChats = new Chats();
         userProfile = new UserProfile();
         usersList = new ArrayList<>();
         mhandler = new Handler();
@@ -79,9 +85,10 @@ public class SplashActivity extends AppCompatActivity implements ValueEventListe
         for (DataSnapshot user : dataSnapshot.getChildren()) {
             users = new Users();
             Log.d(TAG, "Realtime DB User Mobile: " + user.getKey());
+            users.setMobileNumber(Long.parseLong(user.getKey()));
             for (DataSnapshot currentUser : user.getChildren()) {
                 if (currentUser.getKey() != null && currentUser.getKey().equals("recent_chat")) {
-                    userChats = currentUser.getValue(UserChats.class);
+                    userChats = currentUser.getValue(Chats.class);
                     if (userChats != null && userChats.getMessage() != null) {
                         users.setRecentChat(userChats.getMessage());
                         Log.d(TAG, "Realtime DB RecentChat: " + userChats.getMessage());

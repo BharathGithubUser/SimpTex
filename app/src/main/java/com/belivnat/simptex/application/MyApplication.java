@@ -1,8 +1,9 @@
-package com.belivnat.simptex;
+package com.belivnat.simptex.application;
 
 import android.app.Application;
 import android.os.Bundle;
 
+import com.belivnat.simptex.utils.Constants;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
