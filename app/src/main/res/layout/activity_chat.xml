@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".modules.userslist.ChatUsersActivity$ChatActivity">
+    tools:context=".modules.userslist.ChatUsersActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_chats"
@@ -30,9 +30,8 @@
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@+id/btn_send_msg"
             android:layout_toLeftOf="@+id/btn_send_msg"
-            android:autofillHints="Enter Your Message Here!"
+            android:hint="Enter Your Message Here!"
             android:padding="2dp"
-            android:text="sdfdfsfsdfsdf"
             android:textSize="20sp" />
 
         <Button
