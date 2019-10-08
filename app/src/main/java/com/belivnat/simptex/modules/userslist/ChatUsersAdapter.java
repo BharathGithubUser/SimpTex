@@ -16,23 +16,23 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.MyViewHolder> {
+public class ChatUsersAdapter extends RecyclerView.Adapter<ChatUsersAdapter.MyViewHolder> {
     List<Users> chatUsers;
     Context context;
-    public ChatListAdapter(List<Users> chatUsers, Context context) {
+    public ChatUsersAdapter(List<Users> chatUsers, Context context) {
         this.chatUsers = chatUsers;
         this.context = context;
     }
     @NonNull
     @Override
-    public ChatListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ChatUsersAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.adapter_chat_list_row, parent,false);
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatListAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ChatUsersAdapter.MyViewHolder holder, int position) {
         if (chatUsers.get(position) != null) {
             holder.tvChatUser.setText(chatUsers.get(position).userName);
             holder.tvRecentChat.setText(chatUsers.get(position).recentChat);

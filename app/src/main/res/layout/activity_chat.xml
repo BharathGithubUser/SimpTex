@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".modules.userslist.ChatListActivity$ChatActivity">
+    tools:context=".modules.userslist.ChatUsersActivity$ChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_chats"

@@ -13,7 +13,7 @@ import com.belivnat.simptex.R;
 import com.belivnat.simptex.model.UserProfile;
 import com.belivnat.simptex.model.Users;
 import com.belivnat.simptex.model.Chats;
-import com.belivnat.simptex.modules.userslist.ChatListActivity;
+import com.belivnat.simptex.modules.userslist.ChatUsersActivity;
 import com.belivnat.simptex.utils.Constants;
 import com.belivnat.simptex.utils.Utils;
 import com.google.firebase.database.DataSnapshot;
@@ -65,7 +65,7 @@ public class SplashActivity extends AppCompatActivity implements ValueEventListe
         runnable = new Runnable() {
             @Override
             public void run() {
-                Intent chatListActivity = new Intent(SplashActivity.this, ChatListActivity.class);
+                Intent chatListActivity = new Intent(SplashActivity.this, ChatUsersActivity.class);
                 chatListActivity.putParcelableArrayListExtra(Constants.USER_LIST_BUNDLE, usersList);
                 startActivity(chatListActivity);
                 finish();
